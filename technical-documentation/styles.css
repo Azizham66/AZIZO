@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    min-width: 250px;
+    background-color: #1b1b1b;
+    color: #f2f7f6;
+    line-height: 1.4;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: lightgrey;
+}
+
+a:visited {
+    color: grey;
+}
+
+#navbar {
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: gray;
+}
+
+nav header {
+    padding: .3em;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+
+}
+
+.nav-item {
+    color: #f7f7f7;
+    border-top: 1px solid;
+    list-style: none;
+    padding: .9rem 1.8rem;
+    position: relative;
+    width: 100%;
+    top: 0;
+    cursor: pointer;
+}
+
+#navbar a {
+    display: block;
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #313131;
+}
+
+
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 30px;
+    margin-bottom: 110px;
+}
+
+#main-doc header {
+    font-size: 1.5rem;
+    background-color: #313131;
+    padding: .6rem;
+    margin: .2rem 1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+section article {
+    margin: 15px;
+    color: #cfcfcf;
+    font-size: 1.1em;
+}
+
+article p, blockquote {
+    margin-bottom: 1.5rem;
+    padding-left: .5em;
+}
+
+.systems {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    padding-left: 2.3rem;
+    border-left: 3px solid gray;
+    border-radius: 3px;
+    margin-left: 1.3rem;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 1.3rem;
+    padding-left: .4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    padding-left: .4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #343434;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.inline {
+    display: inline;
+    position: static;
+    padding: .1rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 270px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #main-doc {
+        margin-left: -10px;
+    }
+
+    code {
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
+    }
+}
