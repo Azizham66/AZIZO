@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Landing Page</title>
+    <script src="https://kit.fontawesome.com/dfa88f91fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="page-wrapper">
+    <header id="header">
+        <div id="logo">
+            <a href="#"><img src="/imgs/healthy-snacks.png" width="70" id="header-img" class="logo-img"></a>
+        <a href="#"><span class="title">THE HEALTHY SNACK COMPANY</span></a>
+        </div>
+        <nav id="nav-bar">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#features">Features</a></li>
+                <li><a class="nav-link" href="#health-benefits">Health</a></li>
+                <li><a class="nav-link" href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2>Gluten Free And Allergy Friendly Snacks</h2>
+        <form id="form" action="./submitted.html">
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email adress here"
+                    required
+            />
+            <input id="submit" type="submit" value="Subscribe to Our News Letter" name="submit" class="btn"></input>
+        </form>
+    </section>
+    <div class="container>">
+        <section id="features">
+            <div class="parent">
+                <div class="icon"><i class="fa-solid fa-award"></i></div>
+                <div class="desc">
+                    <h2>Risk-free Membership</h2>
+                    <p>If you don’t make money back in a year, we pay you the difference</p>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="desc">
+                    <h2>Snack Guarantee</h2>
+                    <p>If you don’t love your snack, we’ll replace it</p>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="icon"><i class="fa-solid fa-tag"></i></div>
+                <div class="desc">
+                    <h2>Guaranteed Savings</h2>
+                    <p>Save 20% - 40% on every order and get $72 in credit annually</p>
+                </div>
+            </div>
+        </section>
+        <section id="health-benefits">
+            <iframe
+                    id="video"
+                    width="520"
+                    height="295"
+                    src="https://www.youtube.com/embed/zudDRHvl304?si=Jsqe34lfXaDVCvvH"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </section>
+        <section id="pricing">
+            <a href="#">
+                <div class="product">
+                    <div class="product-title">Dark Chocolate Sea Salt Almonds</div>
+                    <img src="/imgs/almonds.png" class="product-image">
+                    <h2 class="price">$50</h2>
+                    <h3 class="discount">$30 with member discount</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="product">
+                    <div class="product-title second">Smoky BBQ Snack Mix, 5lb</div>
+                    <img src="/imgs/mix-snack.jpg" class="product-image">
+                    <h2 class="price">$30</h2>
+                    <h3 class="discount">$18 with member discount</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="product">
+                    <div class="product-title third">Sriracha Cashews, 5lb</div>
+                    <img src="/imgs/siracha.jpg" class="product-image">
+                    <h2 class="price">$25</h2>
+                    <h3 class="discount">$15 with member discount</h3>
+                </div>
+            </a>
+        </section>
+        <footer id="footer">
+            <ul class="footer-nav">
+                <li><a class="navlink" href="#">Privacy</a></li>
+                <li><a class="navlink" href="#">Terms</a></li>
+                <li><a class="navlink" href="#">Contact</a></li>
+            </ul>
+            <span class="copyright">&copy; Copyright 2024, ABDULAZIZ HAMZAH</span>
+            <br>
+            <span class="credits">All images were taken from <a href="https://naturebox.com/"> Nature Box</a></span>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
