@@ -201,6 +201,7 @@ header {
     font-weight: 500;
     position: absolute;
     bottom: 0;
+    width: 100%;
     max-width: 350px;
     min-width: 250px;
     padding: 10px;
