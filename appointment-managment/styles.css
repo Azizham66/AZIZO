@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(to right, #E3F2FD, #BBDEFB);
+    text-align: right;
+}
+
+/* Header Styling */
+#app-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border-radius: 12px;
+}
+
+/* Language Selector */
+.language-select {
+    font-size: 16px;
+    font-family: "Cairo", sans-serif;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #0D47A1;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.language-select:hover {
+    border-color: #1976D2;
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.5);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #0D47A1;
+    margin: 20px 0 20px 0;
+}
+
+#appo-app {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 65vw;
+    max-width: 600px;
+    height: 610px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-footer .btn {
+    margin: 25px 0;
+}
+
+.btn {
+    background: linear-gradient(to right, #0D47A1, #1976D2); /* Deep Blue Gradient */
+    color: white; /* Text Color */
+    font-size: 18px;
+    font-family: 'Cairo', sans-serif; /* Matches Arabic font */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px; /* Soft Rounded Corners */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.large-btn {
+    width: 90%;
+    font-size: 1.2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #1976D2, #2196F3); /* Lighter Blue on Hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: scale(0.95); /* Click Effect */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif; /* Matches Arabic font */
+    border: 2px solid #BBDEFB; /* Light Blue Border */
+    border-radius: 8px; /* Soft Rounded Corners */
+    background: rgba(255, 255, 255, 0.6); /* Slight Transparency */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    text-align: right;
+}
+
+
+input:focus {
+    border-color: #1976D2; /* Deep Blue on Focus */
+    background: rgba(255, 255, 255, 0.8); /* Lighter Background on Focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-family: 'Cairo', sans-serif; /* Matches Arabic font */
+    color: #0D47A1; /* Deep Blue for Clear Readability */
+    margin: 10px 0;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+#close-form {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.form-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-header button i {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.appo-form {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    z-index: 999;
+    padding: 15px;
+    width: 65vw;
+    max-width: 600px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#confirm-close-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#confirm-close-dialog p {
+    font-size: 20px;
+    font-family: 'Cairo', sans-serif;
+    color: #37474F;
+    margin-bottom: 20px;
+}
+
+.cancel-discard-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cancel-discard-btn-container .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#discard-btn {
+    background: #D32F2F;
+    color: white;
+    border: none;
+}
+
+#discard-btn:hover {
+    background: #B71C1C;
+}
+
+#cancel-btn {
+    background: #BBDEFB;
+    color: #0D47A1;
+    border: none;
+}
+
+#cancel-btn:hover {
+    background: #90CAF9;
+}
+
+.hidden {
+    display: none;
+}
+
+#appo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.task {
+    background: white;
+    border-left: 6px solid #1976D2; /* Blue Accent for Identification */
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Cairo', sans-serif;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task p {
+    font-size: 16px;
+    color: #37474F;
+    margin: 6px 0;
+}
+
+.task strong {
+    color: #0D47A1;
+}
+
+.task .btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task .btn:first-of-type {
+    background: #FFB300;
+    color: white;
+    border: none;
+}
+
+.task .btn:first-of-type:hover {
+    background: #FFA000;
+}
+
+.task .btn:last-of-type {
+    background: #D32F2F;
+    color: white;
+    border: none;
+}
+
+.task .btn:last-of-type:hover {
+    background: #B71C1C;
+}
