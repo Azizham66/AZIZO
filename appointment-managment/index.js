@@ -21,7 +21,7 @@ const translations = {
         timeStrongEl: "الساعة: "
     },
     en: {
-        title: "Appointment Booking App",
+        title: "Appointment Managment App",
         addAppo: "Add Appointment",
         patientName: "Patient Name",
         date: "Appointment Date",
