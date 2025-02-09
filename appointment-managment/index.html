@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport"
+          content="width=device-width initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>تنظيم مواعيد</title>
+    <script src="https://kit.fontawesome.com/dfa88f91fb.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>تطبيق حجز مواعيد</h1>
+        <div id="appo-app">
+            <button class="btn large-btn" id="open-form">أضف موعد</button>
+            <form action="" id="appo-form" class="appo-form hidden">
+                <div class="form-header"><button id="close-form" type="button" aria-label="close"><i class="fa-solid fa-x"></i></button></div>
+                <div class="form-body">
+                    <label for="patient-name">اسم المريض:</label>
+                    <input type="text" id="patient-name" class="patient-name" name="patient-name" value="" required placeholder="اسم المريض">
+                    <label for="date-input">تاريخ الموعد:</label>
+                    <input type="date" id="date-input" class="date-input" name="date-input" value="">
+                    <label for="day-of-week">اليوم: </label>
+                    <input type="text" id="day-of-week" class="week-day" name="day-of-week" placeholder="يوم الأسبوع" value="">
+                    <label for="time-input">الساعة: </label>
+                    <input type="time" id="time-input" class="time" name="time-input" value="">
+                </div>
+                <div class="form-footer">
+                    <button id="add-or-update-form-btn" type="submit" class="btn large-btn">أضف الموعد للقائمة</button>
+                </div>
+            </form>
+            <dialog id="confirm-close-dialog">
+                <form method="dialog">
+                    <p class="dialog-text">تجاهل التغييرات؟</p>
+                    <div class="cancel-discard-btn-container">
+                        <button id="cancel-btn" class="btn">أكمل التعديل</button>
+                        <button id="discard-btn" class="btn">تجاهل التغييرات</button>
+                    </div>
+                </form>
+            </dialog>
+            <div id="appo-container"></div>
+        </div>
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
