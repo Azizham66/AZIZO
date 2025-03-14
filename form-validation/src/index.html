@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet"
+  >
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="form-body">
+        <form id="form" novalidate>
+          <fieldset class="general-info">
+            <div class="name-div">
+              <div class="first-name-div">
+                <label for="first-name" class="small-text">First Name <span class="green">*</span></label>
+                <input type="text" id="first-name" class="input-field">
+                <p class="hidden error required small-text">This field is required</p>
+              </div>
+
+              <div class="last-name-div">
+                <label for="last-name" class="small-text">Last Name <span class="green">*</span></label>
+                <input type="text" id="last-name" class="input-field">
+              <p class="hidden error required small-text">This field is required</p>
+              </div>
+            </div>
+            <div class="email-div">
+              <label for="email" class="small-text">Email Address <span class="green">*</span></label>
+              <input type="email" id="email" class="input-field">
+              <p class="hidden error required small-text">This field is required</p>
+              <p class="hidden error invalid small-text">Please enter a valid email address</p>
+
+            </div>
+          </fieldset>
+          <fieldset class="query-type">
+            <legend class="small-text">Query Type <span class="green">*</span></legend>
+            <div class="query-inputs">
+              <div class="query-container">
+                <input type="radio" name="query" id="query-type-1" class="radio-input"><label for="query-type-1"> General Enquiry</label>
+              </div>
+              <div class="query-container">
+                <input type="radio" name="query" id="query-type-2" class="radio-input"><label for="query-type-2"> Support Request</label>
+              </div>
+            </div>
+            <p class="error hidden unselected small-text">Please select a query type</p>
+          </fieldset>
+          <fieldset class="message-area">
+            <label for="message" class="small-text">Message <span class="green">*</span></label>
+            <textarea id="message" class="input-field"></textarea>
+            <p class="hidden error required small-text">This field is required</p>
+          </fieldset>
+          <fieldset class="consent-area">
+            <div class="check-container">
+              <input type="checkbox" id="consent"><label for="consent" class="small-text">I consent to being contacted by the team <span class="green">*</span></label>
+            </div>
+            <p class="error hidden unchecked small-text">To submit this form, please consent to being contacted</p>
+          </fieldset>
+
+          <button type="submit" class="btn" id="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="dialog-container">
+      <dialog id="success" class="success-dialog">
+        <span class="dialog-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+          Message Sent!</span>
+        <span class="dialog-text">Thanks for completing the form. We'll be in touch soon!</span>
+      </dialog>
+    </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">ABDULAZIZ HAMZAH</a>.
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

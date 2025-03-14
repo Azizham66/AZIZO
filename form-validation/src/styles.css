@@ -1,0 +1,265 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-green: hsl(148, 38%, 91%);
+    --medium-green: hsl(169, 82%, 27%);
+    --dark-green: hsl(171, 83%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --medium-grey: hsl(186, 15%, 59%);
+    --dark-grey: hsl(187, 24%, 22%);
+    --label-size: 14px;
+    --main-font: 'Karla';
+    --normal-weight: 400;
+    --heavy-weight: 700;
+}
+
+body {
+    background-color: var(--light-green);
+    font-family: var(--main-font), sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    max-width: 500px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+fieldset {
+    border: none;
+    margin: 15px 0;
+}
+
+.email-div {
+    margin-top: 15px;
+}
+
+input, textarea {
+    cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+    display: block;
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1.5px solid var(--medium-grey);
+    padding: 0 10px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin: 10px 0;
+    border: 1.5px solid var(--medium-grey);
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+}
+textarea:hover {
+    border-color: var(--medium-green)
+}
+
+textarea:focus {
+    outline: none;
+    border: 1.5px solid var(--medium-green);
+}
+
+
+
+input:hover {
+    border-color: var(--medium-green)
+}
+
+input:focus {
+    outline: none;
+    border: 1.5px solid var(--medium-green);
+}
+
+.name-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.name-div > div {
+    width: 100%;
+}
+
+.green {
+    color: var(--medium-green);
+}
+
+.small-text {
+    font-size: var(--label-size);
+}
+
+.error {
+    color: #d03640;
+}
+
+.query-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.query-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border: 1px solid var(--medium-grey);
+    border-radius: 5px;
+    padding-left: 15px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15.75px;
+    border: 2px solid var(--medium-grey);
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked {
+    border:none;
+    background: url("../assets/images/icon-radio-selected.svg");
+}
+
+.query-container:hover {
+    border-color: var(--medium-green);
+}
+
+.query-container:has(input[type="radio"]:checked) {
+    background-color: var(--light-green);
+}
+
+.check-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#consent {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 1.5px solid var(--medium-grey);
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+#consent:checked {
+    border: none;
+    background: url("../assets/images/icon-checkbox-check.svg");
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    height: 35px;
+    background-color: var(--medium-green);
+    font-family: var(--main-font), sans-serif;
+    font-size: 17px;
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: var(--dark-green);
+}
+
+dialog {
+    position: fixed;
+    border: none;
+    padding: 15px;
+    width: 40%;
+    min-width: 250px;
+    border-radius: 15px;
+    top: 4.5rem;
+    background-color: var(--dark-green);
+    color: var(--white);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog:focus {
+    outline: none;
+}
+
+.dialog-text {
+    font-size: 14px;
+}
+
+svg {
+    margin-right: 8px;
+}
+
+.dialog-header {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 540px) {
+    body {
+        height: auto;
+    }
+    .form-container {
+        width: 80%;
+        margin-top: 3rem;
+    }
+    .name-div {
+        flex-direction: column;
+    }
+    .query-inputs {
+        flex-direction: column;
+    }
+    .query-container {
+        width: 100%;
+    }
+    textarea {
+        height: 150px;
+    }
+    .attribution {
+        position: relative;
+    }
+}
+
+
+
