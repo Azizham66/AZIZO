@@ -1,0 +1,275 @@
+/* Import Pokémon font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: url('pokemon-pattern.png') repeat;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Ensures full viewport height */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #ffcc00, #ff0000);
+    padding: 30px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin: 5px;
+}
+
+form {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* Pokémon Search Form */
+.form {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 450px; /* Prevents stretching too wide */
+}
+
+/* Align input and button in a row, with space between *
+
+/* Input Field */
+input[type="text"] {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff; /* Background color set to white */
+    color: #000; /* Text color set to black */
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Button */
+button {
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 350px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Pokémon Result Display */
+.result {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+    border: 5px solid #ffcc00;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.image-container {
+    height: 200px;
+}
+.general-info {
+    height: 16px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+}
+
+#categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px
+}
+
+/* Type Labels */
+.type {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.size-info {
+    margin-top: 10px;
+}
+
+.size-info span {
+    font-size: .8rem;
+}
+
+/* Type Colors */
+.type.normal { background: #a8a878; }
+.type.fire { background: #f08030; }
+.type.water { background: #6890f0; }
+.type.electric { background: #f8d030; }
+.type.grass { background: #78c850; }
+.type.ice { background: #98d8d8; }
+.type.fighting { background: #c03028; }
+.type.poison { background: #a040a0; }
+.type.ground { background: #e0c068; }
+.type.flying { background: #a890f0; }
+.type.psychic { background: #f85888; }
+.type.bug { background: #a8b820; }
+.type.rock { background: #b8a038; }
+.type.ghost { background: #705898; }
+.type.dragon { background: #7038f8; }
+.type.dark { background: #705848; }
+.type.steel { background: #b8b8d0; }
+.type.fairy { background: #ee99ac; }
+
+/* Stats Table */
+.stats table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ffcc00;
+}
+
+th {
+    border-top: 2px solid #ffcc00;
+}
+
+/* Footer */
+footer {
+    background: #003a6d;
+    padding: 30px;
+    font-size: 0.875rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .poke-form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    input[type="text"], button {
+        max-width: 90%;
+    }
+
+    .result {
+        padding: 20px;
+    }
+}
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .form {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    input[type="text"], button {
+        max-width: 90%;
+    }
+
+    .result {
+        padding: 20px;
+    }
+
+    .form, .result {
+        width: 90%;
+    }
+
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    input[type="text"], button {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    .form, .result {
+        width: 90%;
+    }
+
+}
+
