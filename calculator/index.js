@@ -91,6 +91,7 @@ const validateSyntax = str => {
     if (/[\d)]\s*√/.test(str)) return "Syntax Error"; // Invalid square root usage (e.g., "9√4" should be "9*√4")
     if (/[+\-*/]$/.test(str)) return "Syntax Error"; // Expression ending with an operator (e.g., "5+3*")
     if (/^\*/.test(str)) return "Syntax Error"; // Expression starting with "*" or "/"
+    if (isNaN(Number(str))) return "Syntax Error";
 
     const openParenCount = (str.match(/\(/g) || []).length;
     const closeParenCount = (str.match(/\)/g) || []).length;
