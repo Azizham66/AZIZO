@@ -100,6 +100,12 @@ const showData = (dataArr) => {
     all.addEventListener("click", (e) => {
         Extension.updateArrays();
         showData(extensions);
+        all.style.backgroundColor = "#c7231a";
+        all.style.color = "#ffffff";
+        active.style.backgroundColor = "#ffffff";
+        active.style.color = "#000000";
+        inactive.style.backgroundColor = "#ffffff";
+        inactive.style.color = "#000000";
         if (!document.body.classList.contains('dark-mode')) {
             applyLightMode();
         } else {
@@ -108,6 +114,12 @@ const showData = (dataArr) => {
     });
     active.addEventListener("click", (e) => {
         Extension.updateArrays();
+        all.style.backgroundColor = "#ffffff";
+        all.style.color = "#000000";
+        active.style.backgroundColor = "#c7231a";
+        active.style.color = "#ffffff";
+        inactive.style.backgroundColor = "#ffffff"
+        inactive.style.color = "#000000";
         showData(activated);
         if (!document.body.classList.contains('dark-mode')) {
             applyLightMode();
@@ -117,6 +129,12 @@ const showData = (dataArr) => {
     })
     inactive.addEventListener("click", (e) => {
         Extension.updateArrays();
+        all.style.backgroundColor = "#ffffff";
+        all.style.color = "#000000";
+        active.style.backgroundColor = "#ffffff";
+        active.style.color = "#000000";
+        inactive.style.backgroundColor = "#c7231a"
+        inactive.style.color = "#ffffff";
         showData(inactivated);
         if (!document.body.classList.contains('dark-mode')) {
             applyLightMode();
