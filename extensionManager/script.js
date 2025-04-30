@@ -195,7 +195,7 @@ const showData = (dataArr) => {
         modeToggle.style.color = darkModeStyles.switchColor;
 
         // Change the mode toggle icon to the sun (indicating dark mode)
-        modeToggle.querySelector('img').src = '/assets/images/icon-sun.svg';
+        modeToggle.querySelector('img').src = './assets/images/icon-sun.svg';
 
         // Save the dark mode preference to localStorage
     }
@@ -232,7 +232,7 @@ const showData = (dataArr) => {
         modeToggle.style.color = lightModeStyles.switchColor;
 
         // Change the mode toggle icon to the moon (indicating light mode)
-        modeToggle.querySelector('img').src = '/assets/images/icon-moon.svg';
+        modeToggle.querySelector('img').src = './assets/images/icon-moon.svg';
 
         // Save the light mode preference to localStorage
 }
