@@ -1,0 +1,245 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+/* When checked */
+.switch input:checked + .slider {
+    background-color: #c7231a;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/static/NotoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Bold';
+    src: url('/assets/fonts/static/NotoSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Medium';
+    src: url('/assets/fonts/static/NotoSans-Medium.ttf') format('truetype');
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(180deg, #f0f4f8 0%, #e5eef3 100%);
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    width: 85vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: white;
+    border: 0.1rem solid lightgrey;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 17px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85vw;
+    padding: 0 10px;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.buttons button {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 55px;
+    border: none;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #f1d4d3;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.cards {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ext-info {
+    display: flex;
+}
+
+.ext-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card img {
+    margin: 0 20px 0 0;
+}
+
+.functions {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.remove {
+    cursor: pointer;
+    border-radius: 12rem;
+}
+
+.remove:hover {
+    background-color: #dc0303;
+    border: none;
+}
+
+.remove:active {
+    background-color: #b30707 !important;
+}
+
+.selected {
+    background-color: #c7231a;
+}
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .card h3 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
+
+.dark-mode .remove:hover{
+    background-color: #525868; /* A bit lighter than dark mode button background */
+    color: #ffffff; /* Keep text readable */
+}
